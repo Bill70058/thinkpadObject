@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dog 1</title>
+</head>
+<body>
+    <script>
+        function Dog(name,size,weight) {
+            this.name = name;
+            this.size = size;
+            this.weight = weight;
+
+            this.back = function() {
+                if(this.weight > 130){
+                    alert("WOOF WOOF");
+                } else {
+                    alert("woof woof");
+                }
+            }
+        };
+        var fox = new Dog("fox","large",38);
+        var huang =new Dog("huang", "large",160);
+        var ji = new Dog("ji", "small", 120);
+        var dogs = [fox, huang, ji];
+        //console.log(fox.name + " " + fox.size + " " + fox.weight);
+        for(var i = 0; i < dogs.length; i++){
+            console.log(
+                dogs[i].name + "+" + dogs[i].size + "+" + dogs[i].weight
+            );
+        }
+        for(var i = 0; i < dogs.length; i++){
+            dogs[i].back();
+        }
+    </script>
+</body>
+</html>

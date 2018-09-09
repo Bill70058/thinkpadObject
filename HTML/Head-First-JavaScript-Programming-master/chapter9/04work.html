@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>04work</title>
+  
+</head>
+<body>
+    <p id="demo"></p>
+     
+    <script>
+        function setTime() {
+            alert("Time`s up");
+        };
+        // setTimeout(setTime, 2000);
+        // setTimeout(() => {
+        //     alert("times up");
+        // }, 2000);
+       var a =  setInterval(() =>{
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML = t;
+        },1000
+        
+        );
+        
+        function mystopFunction() {
+            window.clearInterval(a);
+        };
+
+    </script>
+    <button onclick="mystopFunction()">点击暂停</button> 
+</body>
+</html>

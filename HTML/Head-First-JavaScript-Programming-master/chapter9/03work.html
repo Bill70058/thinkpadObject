@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>03work</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+        img {
+            margin: 20px;
+        }
+    </style>
+    <script>
+        window.onload = init;
+        function init() {
+            var images = document.getElementsByTagName("img");//当把tagname传递给变量时变量就是一个“对象列表”，类似于数组但又不是数组
+            for(var i = 0; i < images.length; i++){
+                images[i].onclick = show;
+            }
+        };//js中可以省略形参
+        function show(Obj) {//形参传入的是事件对象
+            // var e = ["zero.jpg", "one.jpg", "two.jpg", "three.jpg", "four.jpg", "five.jpg"];
+            // var value = document.getElementsByTagName("img");
+            // for(var i = 0; i < value.length; i++){
+            //     value[i].src = e[i];
+            // }
+            
+            //在这里形参不是个体而是与target方法在一起整个看成一个整体，形参无实意，主要是给target方法一个依附，整体可以看成target方法的运用，返回一个对象    
+            var image = Obj.target;//利用target方法将用户点击的图像返回
+            
+            var name = image.id;
+            name = name + ".jpg";
+            image.src = name;
+
+            setTimeout(() => {
+            var image = Obj.target;//利用target方法将用户点击的图像返回            
+            var name = image.id;
+            name = name + "blur.jpg";
+            image.src = name;
+            }, 2000, image);
+        };
+    </script>
+</head>
+<body>
+    <img src="zeroblur.jpg" alt="zero" id="zero">
+    <img src="oneblur.jpg" alt="oneblur" id="one">
+    <img src="twoblur.jpg" alt="twoblur" id="two">
+    <img src="threeblur.jpg" alt="threeblur" id="three">
+    <img src="fourblur.jpg" alt="fourblur" id="four">
+    <img src="fiveblur.jpg" alt="fiveblur" id="five">
+</body>
+</html>

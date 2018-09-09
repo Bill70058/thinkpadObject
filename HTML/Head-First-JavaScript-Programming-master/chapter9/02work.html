@@ -1,0 +1,89 @@
+ <!doctype html>
+ <!--
+<html>
+
+<head>
+    <title>02work</title>
+    <meta charset="utf-8">
+    <script>
+            window.onload = zero1;
+        function zero1() {
+            var value = document.getElementById("zero");
+            value.onclick = doubel;
+        };
+        function double() {
+            var value = document.getElementById("zero");
+            value.src = "zero.jpg";
+        }
+    </script>
+</head>
+<body>
+    <img src="zeroblur.jpg" id="zero" onclick="double">
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02work</title>
+    <meta charset="utf-8">
+    <style>
+        body{
+            margin: 20px;
+        }
+        img {
+            margin: 20px;
+        }
+    </style>
+    <script>
+    window.onload = zero;
+        function zero() {
+            var value = document.getElementById("zero");
+            value.onclick = zero0;
+            var value1 = document.getElementById("one");
+            value1.onclick = zero1;
+            var value2 = document.getElementById("two");
+            value2.onclick = zero2;
+            var value3 = document.getElementById("three");
+            value3.onclick = zero3;
+            var value4 = document.getElementById("four");
+            value4.onclick = zero4;
+            var value5 = document.getElementById("five");
+            value5.onclick = zero5;
+        };
+        function zero0() {
+            var value = document.getElementById("zero");
+            value.src = "zero.jpg";
+        };
+        function zero1() {
+            var value = document.getElementById("one");
+            value.src = "one.jpg";
+        };
+        function zero2() {
+            var value = document.getElementById("two");
+            value.src = "two.jpg";
+        };
+        function zero3() {
+            var value = document.getElementById("three");
+            value.src = "three.jpg";
+        };
+        function zero4() {
+            var value = document.getElementById("four");
+            value.src = "four.jpg";
+        };
+        function zero5() {
+            var value = document.getElementById("five");
+            value.src = "five.jpg";
+        }
+
+        
+    </script>
+</head>
+<body>
+    <img src="zeroblur.jpg" alt="zero" id="zero">
+    <img src="oneblur.jpg" alt="oneblur" id="one">
+    <img src="twoblur.jpg" alt="twoblur" id="two">
+    <img src="threeblur.jpg" alt="threeblur" id="three">
+    <img src="fourblur.jpg" alt="fourblur" id="four">
+    <img src="fiveblur.jpg" alt="fiveblur" id="five">
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>01work</title>
+</head>
+<body>
+    <script>
+    window.onload=function(){
+        var count = 0;
+        var message = "you click me";
+        var div = document.getElementById("fuck");
+        var clickme = document.getElementById("clickme");
+
+        clickme.onclick = function() {
+            count++;
+            div.innerHTML =  message + count + "times";
+        };
+    };
+    </script>
+    <button id="clickme">click me</button>
+    <p id="fuck"></p>
+</body>
+</html>

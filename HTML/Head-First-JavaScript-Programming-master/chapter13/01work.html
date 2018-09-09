@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Robot</title>
+</head>
+<body>
+    <script>
+        function Robot(name,year,owner) {
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+        };
+        Robot.prototype.maker = "maker is Bill";
+        Robot.prototype.speak = function() {
+            console.log("i am a robot");
+        };
+        Robot.prototype.blinkLights = function() {
+            console.log("Din Du");
+        };
+
+        var robby = new Robot("Robby", "1956", "Dr.Morbius");
+        var rosie = new Robot("Rosie", "1962", "George Jetson");
+
+        robby.onOffSwitch = true;
+        robby.makeCoffee = function() {
+            console.log("i will go to starbuks buy coffee");
+        };
+
+        rosie.cleanHouse = function() {
+            console.log("clean clean");
+        };
+
+        console.log(robby.name + " was made by " + robby.maker + " in " + robby.year + " and is owned by " + robby.owner);
+        robby.makeCoffee();
+        robby.blinkLights();
+
+        console.log(rosie.name + " was made by " + rosie.maker + " in " + rosie.year + " and is owned by " + rosie.owner);
+        rosie.cleanHouse();
+    </script>
+</body>
+</html>
