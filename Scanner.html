@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Scanner</title>
+    <style>
+        .textarea {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <textarea name="code" id="scanner" cols="66" rows="30">
+
+<code>
+    import java.util.Scanner; public class Work01 {
+         //计算圆的面积 
+         public static void main(String[] args) {
+              Scanner input = new Scanner(System.in);
+              System.out.println("plese input Circle radius: ");
+              double radius = input.nextDouble();
+              double area = 3.14 * radius *radius;
+              System.out.println("Circle area is :" + area); 
+    }
+     }
+
+ //录入单个字符
+  Scanner input = new Scanner(System.in); 
+  char sex = input.next().charAt(0); 
+  System.out.println(sex);
+
+    //比较next(); 与nextLine();的区别
+    // String bang1 = input.next();
+    // System.out.println(bang1); 
+    String bang2 = input.nextLine();
+    System.out.println(bang2); 
+    //结论 
+    /** * next以空格为结束录入 * nextLine不以空格为终止符*/
+
+</code>
+        </textarea>
+    </div>
+</body>
+</html>
